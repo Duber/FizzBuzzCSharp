@@ -8,25 +8,31 @@ using System.Threading.Tasks;
 
 namespace FizzBuzzCSharp.FizzBuzz.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class FizzBuzzTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void WhenThreeThenFizz()
         {
            Assert.AreEqual("Fizz", FizzBuzz.Calculate(3));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WhenFiveThenBuzz()
         {
             Assert.AreEqual("Buzz", FizzBuzz.Calculate(5));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WhenFiveTeenThenFizzBuzz()
         {
             Assert.AreEqual("FizzBuzz", FizzBuzz.Calculate(15));
+        }
+
+        [TestMethod]
+        public void GivenANonDivisibleNumberThenSameNumberIsReturned()
+        {
+            Assert.AreEqual("2", FizzBuzz.Calculate(2));
         }
     }
 }
