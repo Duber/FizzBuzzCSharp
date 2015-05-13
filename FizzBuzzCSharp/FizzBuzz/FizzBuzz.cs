@@ -9,25 +9,28 @@ namespace FizzBuzzCSharp.FizzBuzz
         {
             for(var i=1; i <= 100; i++)
             {
-                var divisibleByThree = (i % 3 == 0);
-                var divisibleByFive = (i % 5 == 0);
-                if (divisibleByThree && divisibleByFive)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (divisibleByThree)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (divisibleByFive)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }                
+                Console.WriteLine(Calculate(i));   
             }            
+        }
+
+        public static string Calculate(int number)
+        {
+            var divisibleByThree = (number % 3 == 0);
+            var divisibleByFive = (number % 5 == 0);
+            if (divisibleByThree && divisibleByFive)
+            {
+                return "FizzBuzz";
+            }
+            else if (divisibleByThree)
+            {
+                return "Fizz";
+            }
+            else if (divisibleByFive)
+            {
+                return "Buzz";
+            }            
+            return number.ToString();
+            
         }
     }
 }
