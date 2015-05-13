@@ -14,25 +14,30 @@ namespace FizzBuzzCSharp.FizzBuzz.Tests
         [TestMethod]
         public void WhenThreeThenFizz()
         {
-           Assert.AreEqual("Fizz", FizzBuzz.Calculate(3));
+            Assert.IsTrue(ExpectedIsEqualToCalculated("Fizz", 3));
         }
 
         [TestMethod]
         public void WhenFiveThenBuzz()
         {
-            Assert.AreEqual("Buzz", FizzBuzz.Calculate(5));
+            Assert.IsTrue(ExpectedIsEqualToCalculated("Buzz", 5));
         }
 
         [TestMethod]
         public void WhenFiveTeenThenFizzBuzz()
         {
-            Assert.AreEqual("FizzBuzz", FizzBuzz.Calculate(15));
+            Assert.IsTrue(ExpectedIsEqualToCalculated("FizzBuzz", 15));
         }
 
         [TestMethod]
         public void GivenANonDivisibleNumberThenSameNumberIsReturned()
         {
-            Assert.AreEqual("2", FizzBuzz.Calculate(2));
+            Assert.IsTrue(ExpectedIsEqualToCalculated("2", 2));
+        }
+
+        private bool ExpectedIsEqualToCalculated(string expected, int number)
+        {
+            return (expected == FizzBuzz.Calculate(number));
         }
     }
 }
