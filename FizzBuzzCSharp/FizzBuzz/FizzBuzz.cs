@@ -5,6 +5,9 @@ namespace FizzBuzzCSharp.FizzBuzz
 {
     public class FizzBuzz
     {
+        readonly static int THREE = 3;
+        readonly static int FIVE = 5;
+
         public static void Run()
         {
             for(var i=1; i <= 100; i++)
@@ -15,8 +18,8 @@ namespace FizzBuzzCSharp.FizzBuzz
 
         public static string Calculate(int number)
         {
-            var divisibleByThree = (number % 3 == 0);
-            var divisibleByFive = (number % 5 == 0);
+            var divisibleByThree = (number % THREE == 0);
+            var divisibleByFive = (number % FIVE == 0);
             if (divisibleByThree && divisibleByFive)
             {
                 return "FizzBuzz";
