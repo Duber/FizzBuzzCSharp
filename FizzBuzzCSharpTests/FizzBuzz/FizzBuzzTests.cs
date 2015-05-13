@@ -12,9 +12,9 @@ namespace FizzBuzzCSharp.FizzBuzz.Tests
     public class FizzBuzzTests
     {
         [TestMethod()]
-        public void RunTest()
+        public void WhenThreeThenFizz()
         {
-            throw new NotImplementedException();
+           Assert.AreEqual("Fizz", FizzBuzz.Calculate(3));
         }
     }
 }
