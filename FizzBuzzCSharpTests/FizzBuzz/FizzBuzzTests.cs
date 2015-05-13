@@ -16,5 +16,17 @@ namespace FizzBuzzCSharp.FizzBuzz.Tests
         {
            Assert.AreEqual("Fizz", FizzBuzz.Calculate(3));
         }
+
+        [TestMethod()]
+        public void WhenFiveThenBuzz()
+        {
+            Assert.AreEqual("Buzz", FizzBuzz.Calculate(5));
+        }
+
+        [TestMethod()]
+        public void WhenFiveTeenThenFizzBuzz()
+        {
+            Assert.AreEqual("FizzBuzz", FizzBuzz.Calculate(15));
+        }
     }
 }
